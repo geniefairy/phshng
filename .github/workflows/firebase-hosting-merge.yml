@@ -14,7 +14,7 @@ jobs:
       - run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          entrypoint: anti-phishing
+          entryPoint: anti-phishing
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_FAIRY_ANTI_PHISHING }}'
           channelId: live
