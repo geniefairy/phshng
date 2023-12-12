@@ -4,7 +4,7 @@ const nextConfig = {
     images : {
         loader : 'custom',
         loaderFile : './app/page.tsx'
-        
+
     }
 }
 
