@@ -4,9 +4,11 @@ import Image from "next/image"
 import { styled } from "styled-components";
 import paypalLan from "../public/paypal/paypalLan.png"
 import paypalLogo from "../public/paypal/paypalLogo.png"
-
+import { useRouter } from 'next/navigation'
 
 const PaypalLogin = () => {
+    const router = useRouter()
+
     const PaypalLogin = styled.div`
         display : flex;
         justify-content : center;
@@ -124,10 +126,11 @@ const PaypalLogin = () => {
         
                     <PaypalLoginInner>
                         <PaypalInputId type="text" placeholder="이메일 또는 휴대폰 번호"/>
+                        <PaypalInputId type="text" placeholder="비밀번호"/>
                         <LoginSetting>
                             <p>이메일 주소를 잊으셨나요?</p>
                         </LoginSetting>
-                        <PaypalLoginBtn>다음</PaypalLoginBtn>
+                        <PaypalLoginBtn onClick={()=>router.push('/paypal')}>로그인</PaypalLoginBtn>
                         <PaypalOrLine>
                             <PaypalLine></PaypalLine>
                             <PaypalOr>또는</PaypalOr>

@@ -1,14 +1,14 @@
 'use client'
 import { styled } from "styled-components";
 import Image from "next/image"
-import nhbank from "../../public/nhbank/nhMain.png"
+import nhbank from "../../public/nhbank/nhMainMobile.jpg"
 import { useRouter } from 'next/navigation'
 export default function Nhbank() {
     const NhMain = styled.div`
         margin : 0;
         padding : 0%;
         width : 100%;
-        height : 110vh;
+        height : 100%;
         img {
             height : 100%;
             object-fit : scale-down;

@@ -1,7 +1,7 @@
 'use client'
 import { styled } from "styled-components";
 import Image from "next/image"
-import naver from "../../public/naver/naverMain.png"
+import naver from "../../public/naver/naverMobile.jpg"
 import { useRouter } from 'next/navigation'
 export default function Naver() {
     const NaverMain = styled.div`
@@ -9,9 +9,11 @@ export default function Naver() {
         padding : 0%;
         width : 100%;
         img {
-            height : 100vh;
-            object-fit : scale-down;
-            width : 100vw;
+            padding:0;
+            margin : 0;
+            height : 100%;
+            object-fit : contain;
+            width : 100%;
             cursor:pointer;
         }
     `

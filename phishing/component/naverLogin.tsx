@@ -6,15 +6,20 @@ import naverLang from "../public/naver/naverLoginLan.png"
 import naverLogo from "../public/naver/naverLogo.png"
 import naverLoginBtn from "../public/naver/NaverLoginBtn.png"
 import naverFooter from "../public/naver/NaverFooter.png"
+import { useRouter } from 'next/navigation'
 
 const NaverLogin = () => {
+    const router = useRouter()
+
     const NaverLogin = styled.div`
+        width : 100%;
         display : flex;
         justify-content : center;
         align-content:center;
         align-items : center;
-        padding : 2% 20% 0% 20%;
+        padding : 2% 0 0 0;
         flex-direction : column;
+        
         
     `
     const NaverLang = styled.div`
@@ -28,16 +33,17 @@ const NaverLogin = () => {
     `
     const NaverLogo = styled.div`
         img{
-            max-width :  200px;
+            max-width :  180px;
             height : auto;
             object-fit:contin;
         }
+        margin-bottom : 1em;
     `
     const NaverLoginBox = styled.div`
         margin-top : 20px;
         border : 1px solid #c6c6c6;
         border-radius : 7px;
-        width : 30em;
+        width :90%;
     `
     const NaverTab = styled.div`
         display:flex;
@@ -81,14 +87,14 @@ const NaverLogin = () => {
         }
     `
     const NaverInputId = styled.input`
-        width : 100%;
+        width : 95%;
         padding : 0.5em;
         height : 2.5em;
         border : solid #c6c6c6 1px;
         border-radius : 10px 10px 0 0;
     `
     const NaverInputPwd = styled.input`
-        width : 100%;
+        width : 95%;
         padding : 0.5em;
         height : 2.5em;
         border : solid #c6c6c6 1px;
@@ -111,7 +117,7 @@ const NaverLogin = () => {
         width : 80%;
     `
     const LoginSetting = styled.div`
-        width : 100%;
+        width : 95%;
         padding : 0 0.5em 0 0.5em;
         display : flex;
         font-size : 14px;
@@ -138,7 +144,7 @@ const NaverLogin = () => {
         }
     `
     const NaverFooterBox = styled.div`
-        width : 30em;
+        width : 90%;
         img {
             object-fit : contain;
             max-width : 100%;
@@ -165,7 +171,7 @@ const NaverLogin = () => {
                             <p>로그인 상태 유지</p>
                             <p>IP보안</p>
                         </LoginSetting>
-                        <NaverLoginBtnDiv>
+                        <NaverLoginBtnDiv onClick={()=>router.push('/naver')}>
                             <Image src={naverLoginBtn} alt="로그인 버튼"/>
                         </NaverLoginBtnDiv>
                     </NaverLoginInner>
